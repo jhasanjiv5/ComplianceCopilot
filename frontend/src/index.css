@@ -1,0 +1,83 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background, #171831);
+
+}
+
+/* Bot Container */
+.bot-fixed-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Assistant Image */
+.bot-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 5px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+  border: 2px solid #2563eb;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.bot-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+.bot-fixed-container:hover .bot-img {
+  transform: scale(1.1);
+}
+
+/* Optional: Speech Bubble */
+.bot-bubble {
+  background: white;
+  padding: 8px 15px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
+/* Show bubble when hovering over the container */
+.bot-fixed-container:hover .bot-bubble {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Small triangle for bubble */
+.bot-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  transform: rotate(45deg);
+}

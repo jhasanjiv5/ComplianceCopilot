@@ -1,0 +1,149 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Container and Background */
+.hero {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+  text-align: center;
+}
+
+/* Typography */
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.hero h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+/* The Search/Input Area */
+.hero > .hero { /* Targeting the inner hero div for the input group */
+  display: flex;
+  gap: 10px;
+  /*background: #ffffff;*/
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 40px;
+}
+
+.form-control.int-primary {
+  flex-grow: 1;
+  border: none;
+  padding: 12px 12px 12px 20px;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+
+}
+
+input, button{
+  margin: 10px 0px 10px 0px !important;
+  border: none;
+  padding: 12px 12px 12px 20px;
+  font-size: 1rem;
+  outline: none;
+  background: transparent; 
+}
+
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* The Answer Card */
+.hero-content {
+  text-align: left;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.hero-content h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 10px;
+}
+
+/* Markdown Styling */
+.board-content {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+.board-content ul {
+  padding-left: 20px;
+}
+
+.board-content li {
+  margin-bottom: 12px;
+}
+
+.board-content strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
