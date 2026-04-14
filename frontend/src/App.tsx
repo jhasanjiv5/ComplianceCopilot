@@ -57,7 +57,8 @@ function App() {
 
   return (
     <div className="hero">
-  <h2>Quality Process Digital Assistant System</h2>
+  <h2>Intelligent Compliance Assistant for the QMS (Quality Management System)
+</h2>
   <h4>
     A RAG-based solution designed to processes one or more quality process documents (PDF).
   </h4>
